@@ -58,12 +58,12 @@ Config = {
     -- You can disable the Adult Emotes here.
     AdultEmotesDisabled = false,
     -- You can disable the Animal Emotes here.
-    AnimalEmotesEnabled = true,
+    AnimalEmotesEnabled = false,
     -- Used to enable or disable the search feature in the menu.
     Search = true,
     -- You can disable the handsup here / change the keybind. It is currently set to Y
     HandsupKeybindEnabled = false,
-    HandsupKeybind = 'x', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+    HandsupKeybind = 'X', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- You can disable the fingrer pointing here / change the keybind. It is currently set to B
     PointingEnabled = false,
     PointingKeybindEnabled = true,
