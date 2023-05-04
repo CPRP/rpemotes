@@ -3717,6 +3717,25 @@ RP.AnimalEmotes = {
             PtfxWait = 200
         }
     },
+    ["bdogfris"] = {
+        "creatures@rottweiler@amb@world_dog_sitting@base",
+        "nill",
+        "Frisbee (big dog)",
+        AnimationOptions = {
+            Prop = 'p_ld_frisbee_01',
+            PropBone = 31086,
+            PropPlacement = {
+                0.2600,
+                0.0200,
+               -0.0600,
+               -173.7526,
+               -169.4149,
+                21.4173
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
 
     ---- ANIMAL EMOTES ----
     ----   SMALL DOG   ----
@@ -5096,13 +5115,35 @@ RP.AnimalEmotes = {
             PtfxInfo = Config.Languages[Config.MenuLanguage]['firework'],
             PtfxWait = 200
         }
-    }
+    },
+    ["sdogfris"] = {
+        "creatures@pug@move",
+        "nill",
+        "Frisbee (small dog)",
+        AnimationOptions = {
+            Prop = 'p_ld_frisbee_01',
+            PropBone = 31086,
+            PropPlacement = {
+                0.1900,
+               -0.0150,
+                0.0000,
+              -90.0000,
+              120.0000,
+                0.000,
+                
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
 }
 
 
 --- EXIT EMOTES ---
 
 RP.Exits = {
+
+------ HUMAN ------
     ["getup"] = {
         "get_up@sat_on_floor@to_stand",
         "getup_0",
@@ -5136,6 +5177,15 @@ RP.Exits = {
             EmoteDuration = 1000
         }
     },
+    ["offtable"] = {
+        "anim@amb@board_room@diagram_blueprints@",
+        "look_around_01_amy_skater_01",
+        "Off Tabble",
+        AnimationOptions = {
+            EmoteDuration = 5700
+        }
+    },
+------ ANIMALS  ------
     ["sdogup"] = {
         "creatures@pug@amb@world_dog_sitting@exit",
         "exit",
@@ -6125,6 +6175,17 @@ RP.Emotes = {
         AnimationOptions = {
             EmoteLoop = true,
             EmoteMoving = false
+        }
+    },
+    ["leanplan"] = {
+        "anim@amb@board_room@diagram_blueprints@",
+        "idle_01_amy_skater_01",
+        "Lean On Table",
+        AnimationOptions = {
+            EmoteLoop = true,
+            StartDelay = 200,
+            ExitEmote = "offtable",
+            ExitEmoteType = "Exits"
         }
     },
     ["me"] = {
@@ -12819,6 +12880,112 @@ RP.PropEmotes = {
             EmoteLoop = true
         }
     },
+    ["bookb"] = {
+        "holding_book_1@dark",
+        "holding_book_1_clip",
+        "Book 2",
+        AnimationOptions = {
+            Prop = 'prop_cs_book_01',
+            PropBone = 57005,
+            PropPlacement = {
+                0.0900,
+                0.0900,
+               -0.0400,
+               80.1585,
+              158.5623,
+               24.7080,
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["bookc"] = {
+        "holding_book_2@dark",
+        "holding_book_2_clip",
+        "Book 3",
+        AnimationOptions = {
+            Prop = "prop_michael_backpack",
+            PropBone = 40269,
+            PropPlacement = {
+                0.0300,
+               -0.1600,
+               -0.0900,
+              -170.7740,
+               112.8415,
+               -20.0836
+            },
+            SecondProp = 'prop_cs_book_01',
+            SecondPropBone = 18905,
+            SecondPropPlacement = {
+                0.0400,
+                0.0400,
+                0.0300,
+              -69.0815,
+              176.3905,
+              19.3724
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["bookd"] = {
+        "holding_book_3@dark",
+        "holding_book_3_clip",
+        "Book 4",
+        AnimationOptions = {
+            Prop = 'prop_cs_stock_book',
+            PropBone = 18905,
+            PropPlacement = {
+                0.0700,
+                0.0400,
+                0.0700,
+                0.0000,
+                0.0000,
+              -15.0000
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["booke"] = {
+        "holding_book_4@dark",
+        "holding_book_4_clip",
+        "Book 5",
+        AnimationOptions = {
+            Prop = 'prop_cs_stock_book',
+            PropBone = 57005,
+            PropPlacement = {
+                0.0100,
+                0.0100,
+               -0.0600,
+               15.1511,
+                3.1232,
+              -21.2448
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["bookf"] = {
+        "holding_book_5@dark",
+        "holding_book_5_clip",
+        "Book 6",
+        AnimationOptions = {
+            Prop = 'v_ilev_mp_bedsidebook',
+            PropBone = 18905,
+            PropPlacement = {
+                0.2100,
+                0.0600,
+                0.0400,
+              170.6161,
+              -14.2960,
+               28.8727
+            },
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
+        }
+    },
     ["bouquet"] = {
         "impexp_int-0",
         "mp_m_waremech_01_dual-0",
@@ -13438,44 +13605,6 @@ RP.PropEmotes = {
         "Tablet 2",
         AnimationOptions = {
             Prop = "prop_cs_tablet",
-            PropBone = 28422,
-            PropPlacement = {
-                -0.05,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            },
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
-     },
-    ["tablet3"] = {
-        "amb@world_human_tourist_map@male@base",
-        "base",
-        "Tablet",
-        AnimationOptions = {
-            Prop = "sf_prop_sf_tablet_01a",
-            PropBone = 28422,
-            PropPlacement = {
-                0.0,
-                -0.03,
-                0.0,
-                20.0,
-                -90.0,
-                0.0
-            },
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
-    },
-    ["tablet4"] = {
-        "amb@code_human_in_bus_passenger_idles@female@tablet@idle_a",
-        "idle_a",
-        "Tablet 2",
-        AnimationOptions = {
-            Prop = "sf_prop_sf_tablet_01a",
             PropBone = 28422,
             PropPlacement = {
                 -0.05,
@@ -20097,38 +20226,133 @@ RP.PropEmotes = {
         }
     },
     ["sax"] = {
-        "smo@milkshake_idle",
-        "milkshake_idle_clip",
+        "play_saxophone@dark",
+        "play_saxophone_clip",
         "Saxophone 1",
         AnimationOptions = {
             Prop = 'rpemotes_prop_saxophone01',
-            PropBone = 60309,
+            PropBone = 57005,
             PropPlacement = {
-              -0.3150,
-               0.0230,
-               0.0010,
-            -161.0151,
-            -86.2348,
-            -79.9734
+               0.0700,
+               0.0400,
+               0.0300,
+             -71.2242,
+              29.3364,
+               5.9514
             },
             EmoteLoop = true,
             EmoteMoving = true
         }
    },
     ["sax2"] = {
-        "smo@milkshake_idle",
-        "milkshake_idle_clip",
-        "Saxophone 1",
+       "play_saxophone@dark",
+       "play_saxophone_clip",
+        "Saxophone 2",
         AnimationOptions = {
             Prop = 'rpemotes_prop_saxophone02',
-            PropBone = 60309,
+            PropBone = 57005,
             PropPlacement = {
-              -0.3150,
-               0.0230,
-               0.0010,
-            -161.0151,
-            -86.2348,
-            -79.9734
+               0.0700,
+               0.0400,
+               0.0300,
+             -71.2242,
+              29.3364,
+               5.9514
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+   },
+    ["poolcue"] = {
+       "pool_pack_1@dark",
+       "pool_pack_1_clip",
+        "Play Pool",
+        AnimationOptions = {
+            Prop = 'prop_pool_cue',
+            PropBone = 57005,
+            PropPlacement = {
+               0.0900,
+               0.2000,
+               0.0800,
+             -61.4338,
+              -7.2194,
+               3.1642
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+   },
+    ["poolcue2"] = {
+       "pool_pack_2@dark",
+       "pool_pack_2_clip",
+        "Play Pool 2 (Pose)",
+        AnimationOptions = {
+            Prop = 'prop_pool_cue',
+            PropBone = 57005,
+            PropPlacement = {
+               0.1200,
+              -0.5200,
+              -0.1200,
+             -78.0400,
+              -1.4526,
+               1.8479
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+   },
+    ["poolcue3"] = {
+       "pool_pack_3@dark",
+       "pool_pack_3_clip",
+        "Play Pool 3 (Pose)",
+        AnimationOptions = {
+            Prop = 'prop_pool_cue',
+            PropBone = 57005,
+            PropPlacement = {
+               0.1200,
+              -0.3500,
+              -0.0200,
+             -90.0000,
+               0.0,
+               0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+   },
+    ["poolcue4"] = {
+       "pool_pack_4@dark",
+       "pool_pack_4_clip",
+        "Play Pool 4 (Pose)",
+        AnimationOptions = {
+            Prop = 'prop_pool_cue',
+            PropBone = 61163,
+            PropPlacement = {
+               0.2600,
+              -0.1600,
+              -0.3100,
+             -31.8144,
+              14.4214,
+             -13.2854
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+   },
+    ["poolcue5"] = {
+       "pool_pack_5@dark",
+       "pool_pack_5_clip",
+        "Play Pool 5",
+        AnimationOptions = {
+            Prop = 'prop_pool_cue',
+            PropBone = 57005,
+            PropPlacement = {
+               0.0700,
+               0.5500,
+               0.1000,
+             -76.6157,
+              -9.5838,
+               2.9748,
             },
             EmoteLoop = true,
             EmoteMoving = true
